@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".panel_manager_list.ListUserActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@drawable/background_isp_icons"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/usersTabs"
+            android:layout_width="match_parent"
+            app:tabTextColor="@color/prata"
+            app:tabIndicatorColor="@color/colorAlert"
+            app:tabSelectedTextColor="@color/colorWhite"
+            android:background="@color/colorPrimaryDarkBlue"
+            android:layout_height="65dp">
+
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabClients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clientes" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabTechnicians"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnicos" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <fragment
+            android:id="@+id/nav_host_user"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            app:defaultNavHost="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/navigation_users" />
+
+        <ImageView
+            android:id="@+id/emptyScheduleList"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:src="@mipmap/empty_mailbox_foreground" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/usersTabs"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="55dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

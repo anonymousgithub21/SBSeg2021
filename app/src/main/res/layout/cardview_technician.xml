@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewTechnician"
+    android:layout_width="match_parent"
+    android:layout_height="97dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/background_isp_icons">
+
+
+    <RelativeLayout
+        android:id="@+id/boxmyBudgetsRequestedContent"
+        android:layout_width="match_parent"
+        android:layout_height="95dp">
+
+        <ImageView
+            android:id="@+id/photoViewTechnician"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/card_default_profile" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/edit_technician"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_edit" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtViewNameTechnican"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/photoViewTechnician"
+            android:text="Vagner Ereno Quincozes"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:id="@+id/rate_technican"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/photoViewTechnician"
+            android:layout_below="@+id/txtViewNameTechnican"
+            android:numStars="5"
+            android:layout_marginTop="5dp"
+            android:scaleX="1.2"
+            android:layout_marginLeft="7dp"
+            android:scaleY="1.2"
+            android:progressBackgroundTint="@color/colorPrimaryDarkBlue"
+            android:secondaryProgressTint="@color/prata" />
+
+        <TextView
+            android:id="@+id/txtViewCertificationTechnican"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_technican"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/photoViewTechnician"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/ic_baseline_check_circle_outline_24"
+            android:textSize="14dp"
+
+            android:text="Certificado" />
+
+        <TextView
+            android:id="@+id/txtViewPhoneTechnician"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewCertificationTechnican"
+            android:layout_marginRight="6dp"
+            android:textSize="15dp"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/photoViewTechnician"
+            android:text=" (55) 99600-5200" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/buttonRevogationTechnician"
+                android:layout_gravity="right"
+                android:layout_marginTop="58dp"
+                android:layout_marginBottom="1dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="11dp"
+                android:text="Revogar Identificação"
+                android:backgroundTint="@color/black_overlay"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_service_selecion"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="3dp"
+    android:background="#fff">
+
+
+    <LinearLayout
+        android:id="@+id/boxServiceContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/imageViewSelectedCheck"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_call_check"
+            />
+
+        <TextView
+            android:id="@+id/card_service_selecion_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="left|center"
+            android:text="Loading"
+            android:textSize="24sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

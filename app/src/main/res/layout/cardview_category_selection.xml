@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="80dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_marginRight="12dp"
+    android:id="@+id/card_category_selecion"
+    android:layout_marginLeft="12dp"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/boxCategoryContent"
+
+        >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:id="@+id/card_company_selecion_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/profile_default" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/card_category_selecion_name"
+            android:text="Loading"
+            android:gravity="left|center"
+            android:layout_toRightOf="@+id/card_company_selecion_icon"
+            android:textSize="24sp"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

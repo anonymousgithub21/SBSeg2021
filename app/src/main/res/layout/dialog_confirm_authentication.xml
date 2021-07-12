@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/slategray1"
+    android:id="@+id/confirmAuthenticationDialog"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_professional_profile"
+        fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/prata"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="snap|scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|center">
+
+                <ImageView
+                    android:id="@+id/header_professional_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background_feedback" />
+
+                <ImageView
+                    android:id="@+id/white_circle"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="85dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/white_circle" />
+
+                <ImageView
+                    android:id="@+id/photo_feedback"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile_default" />
+
+                <RatingBar
+                    android:id="@+id/rate_technican"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/photo_feedback"
+                    android:layout_centerHorizontal="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/prata_dark"
+                    android:progressTint="@color/colorRatingOrange"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    android:secondaryProgressTint="@color/prata" />
+
+                <TextView
+                    android:id="@+id/nameConfirmation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_technican"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/carregando"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/certificateTechnician"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameConfirmation"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/carregando"
+                    android:textAlignment="center"
+                    android:drawableRight="@drawable/ic_call_check"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/prata"
+            android:orientation="vertical">
+
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/buttonConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimaryBlue"
+                android:text="Confirmar Identidade"
+                android:textColor="@color/colorInform" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

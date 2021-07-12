@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_users"
+    app:startDestination="@+id/navigation_client">
+
+    <fragment
+        android:id="@+id/navigation_client"
+        android:name="com.tcc2.bke_auth4isp.panel_manager_list_client.view.ListClientFragment"
+        android:label="Clientes"
+        tools:layout="@layout/list_client_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_technician"
+        android:name="com.tcc2.bke_auth4isp.panel_manager_list_technician.view.ListTechnicianFragment"
+        android:label="Técnicos"
+        tools:layout="@layout/list_technician_fragment" />
+</navigation>

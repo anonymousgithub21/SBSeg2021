@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/emptyAttendanceList"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="6dp"
+        android:visibility="invisible"
+        android:src="@mipmap/empty_mailbox_foreground" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="16dp"
+        app:fabSize="auto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        app:fabCustomSize="@android:dimen/notification_large_icon_height"
+        android:contentDescription="TESTE"
+        android:src="@drawable/ic_person_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListClient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_isp_icons"
+        android:layout_marginBottom="55dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,251 @@
+{
+  "API" : {
+    "Client" : {
+      "00100100101" : {
+        "cpf" : "001.001.001-01",
+        "name" : "Ivana Carvalho",
+        "phone" : "55 99636-5020",
+        "rg" : 510253215,
+        "url_photo" : "https://lh3.googleusercontent.com/a-/AOh14GjnBMuEt0I6Lblgoj1i4y48fs8YKpcPdbE8GZYZ9Q",
+        "username" : "ivanacarvalho"
+      },
+      "04045119028" : {
+        "cpf" : "040.451.190-28",
+        "name" : "Jorginho Silveira Martins",
+        "phone" : "55 99636-5048",
+        "rg" : 5101856695,
+        "url_photo" : "",
+        "username" : "jorginhosilveiramartins"
+      },
+      "04056225440" : {
+        "cpf" : "040.562.254-40",
+        "name" : "João Victor Severo",
+        "phone" : "(54) 56321154",
+        "rg" : 54125641,
+        "url_photo" : "",
+        "username" : "joaovictorsevero"
+      }
+    },
+    "Technician" : {
+      "04045119029" : {
+        "certified" : "Certificado",
+        "coutFeedbacks" : 0,
+        "cpf" : "040.451.190-29",
+        "name" : "Frederico Alfredo",
+        "phone" : "(55) 99650-4021",
+        "rating" : 0,
+        "rg" : 5101854462,
+        "url_photo" : "",
+        "username" : "fredericoalfredo"
+      }
+    }
+  },
+  "ISP" : {
+    "INTERNEITH" : {
+      "Calls" : {
+        "vequincozes2" : [ {
+          "date" : "24/12/2000",
+          "id_call" : 0,
+          "name_technician" : "Vagner Tecnico",
+          "url_photo" : "https://lh3.googleusercontent.com/a-/AOh14Giatzgf4pBBCoZqvOVrjQ_Ws2aRSLAOdDWh-3EC4Q",
+          "username_client" : "",
+          "username_technician" : "vequincozes"
+        }, {
+          "date" : "24/12/2010",
+          "id_call" : 0,
+          "name_technician" : "Raquel Trindade",
+          "url_photo" : "https://i.pinimg.com/originals/ad/13/9b/ad139bf8e30200543c6bf9a00e146b68.png",
+          "username_client" : "",
+          "username_technician" : "vequincozes"
+        } ]
+      },
+      "Client" : {
+        "ivanacarvalho" : {
+          "cpf" : "001.001.001-01",
+          "name" : "Ivana Fontoura Carvalho",
+          "phone" : "(55) 99636-5020",
+          "rg" : 510253215,
+          "url_photo" : "https://lh3.googleusercontent.com/a-/AOh14GjnBMuEt0I6Lblgoj1i4y48fs8YKpcPdbE8GZYZ9Q",
+          "username" : "ivanacarvalho"
+        },
+        "joaovictorsevero" : {
+          "cpf" : "040.562.254-40",
+          "name" : "João Victor Severo",
+          "phone" : "(54) 3255-2857",
+          "rg" : 54125641,
+          "url_photo" : "https://cdn.icon-icons.com/icons2/39/PNG/128/user_person_people_6100.png",
+          "username" : "joaovictorsevero"
+        },
+        "vequincozes2" : {
+          "cpf" : "",
+          "name" : "Vagner Ereno Quincozes",
+          "phone" : "(55) 99620-5052",
+          "rg" : 516515,
+          "url_photo" : "https://lh3.googleusercontent.com/a-/AOh14Giatzgf4pBBCoZqvOVrjQ_Ws2aRSLAOdDWh-3EC4Q",
+          "username" : "vequincozes2"
+        }
+      },
+      "Feedback" : [ {
+        "comments" : "",
+        "name_techinician" : "Vagner Tecnico",
+        "rating" : 2.5,
+        "username_client" : "",
+        "username_techinician" : "vequincozes"
+      }, {
+        "comments" : "",
+        "name_techinician" : "Vagner Tecnico",
+        "rating" : 4,
+        "username_client" : "",
+        "username_techinician" : "vequincozes"
+      }, {
+        "comments" : "",
+        "name_techinician" : "Raquel Trindade",
+        "rating" : 5,
+        "username_client" : "",
+        "username_techinician" : "vequincozes"
+      } ],
+      "Manager" : {
+        "vequincozes1" : {
+          "cpf" : "",
+          "name" : "Vagner Manager",
+          "phone" : "",
+          "responsability" : "",
+          "rg" : 516515,
+          "username" : "vequincozes1"
+        }
+      },
+      "Technician" : {
+        "fredericoalfredo" : {
+          "certified" : "Certificado",
+          "countFeedbacks" : 0,
+          "cpf" : "040.451.190-29",
+          "name" : "Frederico Alfredo",
+          "phone" : "(55) 99650-4021",
+          "rating" : 0,
+          "rg" : 5101854462,
+          "url_photo" : "https://img.icons8.com/emoji/452/person.png",
+          "username" : "fredericoalfredo"
+        },
+        "joaodasilva" : {
+          "certified" : "Certificado",
+          "countFeedbacks" : 0,
+          "cpf" : "104.105.105-10",
+          "name" : "João da Silva",
+          "phone" : "(55) 99610-5050",
+          "rating" : 0,
+          "rg" : 5101523621,
+          "url_photo" : "https://cdn.icon-icons.com/icons2/546/PNG/128/1455555011_users-10_icon-icons.com_53271.png",
+          "username" : "joaodasilva"
+        },
+        "vequincozes" : {
+          "certified" : "Certificado",
+          "countFeedbacks" : 14,
+          "cpf" : "",
+          "name" : "Raquel Trindade",
+          "phone" : "(55) 99611-0234",
+          "rating" : 3.423076868057251,
+          "rg" : 516515,
+          "url_photo" : "https://i.pinimg.com/originals/ad/13/9b/ad139bf8e30200543c6bf9a00e146b68.png",
+          "username" : "vequincozes"
+        },
+        "vequincozes10" : {
+          "certified" : "Certificado",
+          "countFeedbacks" : 0,
+          "cpf" : "",
+          "name" : "Vagner Ereno",
+          "phone" : "55 996119422",
+          "rating" : 0,
+          "rg" : 15152122,
+          "url_photo" : "https://lh3.googleusercontent.com/a-/AOh14Giatzgf4pBBCoZqvOVrjQ_Ws2aRSLAOdDWh-3EC4Q",
+          "username" : "vequincozes10"
+        }
+      },
+      "User" : {
+        "fredericoalfredo" : {
+          "password" : "fred12345",
+          "role" : "Technician",
+          "username" : "fredericoalfredo"
+        },
+        "ivanacarvalho" : {
+          "password" : "ivana",
+          "role" : "Client",
+          "username" : "ivanacarvalho"
+        },
+        "joaodasilva" : {
+          "password" : "12345",
+          "role" : "Technician",
+          "username" : "joaodasilva"
+        },
+        "joaovictorsevero" : {
+          "password" : "1234",
+          "role" : "Client",
+          "username" : "joaovictorsevero"
+        },
+        "vequincozes" : {
+          "password" : "123",
+          "role" : "Technician",
+          "username" : "vequincozes"
+        },
+        "vequincozes1" : {
+          "password" : "123",
+          "role" : "Manager",
+          "username" : "vequincozes1"
+        },
+        "vequincozes2" : {
+          "password" : "123",
+          "role" : "Client",
+          "username" : "vequincozes2"
+        }
+      }
+    }
+  },
+  "ISP_LIST" : [ {
+    "id" : 0,
+    "name" : "INTERNEITH"
+  }, {
+    "id" : 1,
+    "name" : "CONESUL"
+  }, {
+    "id" : 2,
+    "name" : "FRONTEIRA"
+  } ],
+  "PROTOCOL" : {
+    "active_session" : {
+      "80C7622471B6AD6D23C7354912BDC97559EA72F65DA8528ADE81D3559FC940B3" : {
+        "M2" : {
+          "payload" : "AAAAgWg6cQwr2yuPCPg5E/xfBe6kn+7kV0nB4kZ1QMN+uv15eP3DQT1AaQYYjD/TYsk9ya3YXmfvxcqrYk3wwErTV+vo/Moe1SXP5I3Jxbf7ytIpMvdg56kuJlBurY/WqN77SEidAlxiYHhT0LnYE1Fxchly6KR0TD3FmkEy4M3WfWSb8t6FPqdgUnk="
+        },
+        "M3" : {
+          "payload" : "AAAAlEuAPP5OT5M5Pnh684tMcu9stPgM62AhISP9MVeZhvbcZX4H4YrKvsQG3REBMV9IRMLTIYEKOO0xw/XERk4sIDDfmo8drSXCw0AVtFqXAcYC1BzlTyawRst+XATKjTKHtGkiZnGXU5L6L15ugDdcUMs+tmaP4l7KtJpxk6vTehuUu6rM9Qfk9ZrdBwIEA6VlST9b/q2e45vB"
+        },
+        "M4" : {
+          "payload" : "AAAAaAbdEQExX0hEwtMhgQo47TEgte49GmKamSP9MVeZhvbcZX4H4YrKvsSnGtJRgg5rMcN/9HxitTX01R17wtcBIn08S8vCr04aCCACa5/V9KrF0YosDiz5hNBhLco+HuXToZutzAM9oCyo"
+        },
+        "M5" : {
+          "payload" : "AAAAVAbdEQExX0hEwtMhgQo47TFPLZCb3rc3HelXOK40G9cKkBbgBsmKLTKLpVIYhpDDdJx1YoiFBzjI95NsrVbwRsSbtDopDBOshKQKyHd6B+AjRf06dm761EY="
+        }
+      }
+    },
+    "session" : {
+      "fredericoalfredo" : {
+        "OTAC" : "REVOGADO"
+      },
+      "ivanacarvalho" : {
+        "OTAC" : "REVOGADO"
+      },
+      "vequincozes" : {
+        "OTAC" : "80C7622471B6AD6D23C7354912BDC97559EA72F65DA8528ADE81D3559FC940B3"
+      }
+    },
+    "vequincozes" : {
+      "MasterKey" : "3B312EDA74981D8859DF5A02FD37F1F3384635021B2DD1CE2C80B90EEE949EA0",
+      "data" : {
+        "IMEI" : "000000-00-000000-0",
+        "KT1" : "1EEFFE64FFED560E873C2329CA0DA9AA4357D412FF6EEA74CEFBAA8D841BA44E",
+        "KT2" : "EEF70F4158CDE69E1D7F9DA732A78575689CA0D42FD5FE21DE01C0B441CD21CE",
+        "app_rnd" : 1526585,
+        "svr_rnd" : 1452365
+      }
+    }
+  }
+}
