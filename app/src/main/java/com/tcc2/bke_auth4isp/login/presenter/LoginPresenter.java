@@ -22,7 +22,6 @@ public class LoginPresenter implements LoginContracts.Presenter {
         this.view = view;
         this.interactor = new LoginInteractor(this);
         this.router = router;
-
     }
 
     @Override
