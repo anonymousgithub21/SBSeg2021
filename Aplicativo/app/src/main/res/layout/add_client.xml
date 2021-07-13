@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_border"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerNotificationErrorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimaryDarkBlue"
+        android:gravity="center"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_person_add" />
+    </RelativeLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/cpfClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:background="@drawable/button_border_blue"
+            android:hint="Digite o CPF"
+            android:maxLength="15"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/infoClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="DADOS GERAIS" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_border_blue"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:id="@+id/relativeInfoClient"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/nameClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:text="Vagner Ereno Quincozes" />
+
+        <TextView
+            android:id="@+id/phoneClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/nameClient"
+            android:textSize="16dp"
+            android:text="(55) 99701-8411" />
+
+        <TextView
+            android:id="@+id/rgClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/phoneClient"
+            android:text="5101856639" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/infoLoginClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="CREDENCIAIS DE USUÁRIO" />
+
+    <EditText
+        android:id="@+id/usernameClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@drawable/ic_baseline_person"
+        android:background="@drawable/button_border_blue"
+        android:hint="nome de usuário"
+        android:padding="8dp"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/passwordClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:inputType="textWebPassword"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@drawable/ic_baseline_password"
+        android:background="@drawable/button_border_blue"
+        android:hint="  password"
+        android:padding="8dp"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnDialogSave"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDarkBlue"
+        android:enabled="false"
+        android:text="salvar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="visible" />
+</LinearLayout>

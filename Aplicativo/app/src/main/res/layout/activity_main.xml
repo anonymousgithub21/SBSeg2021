@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_leitura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leitura"
+        android:layout_marginTop="100dp"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Por ex. informe a palavra p codificação"
+        android:textSize="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        />
+
+    <Button
+        android:id="@+id/btn_gerar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gerador"
+        android:layout_marginTop="230dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        />
+
+</RelativeLayout>

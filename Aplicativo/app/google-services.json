@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87878740615",
+    "project_id": "inovaisp",
+    "storage_bucket": "inovaisp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87878740615:android:75feb39aadaf629de2e622",
+        "android_client_info": {
+          "package_name": "com.tcc2.bke_auth4isp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87878740615-ne4simgi02hldq187n9am61lph93s1js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQjfgTxCLFn2wMF1Fy2VXYyOcRJSj6jdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87878740615-ne4simgi02hldq187n9am61lph93s1js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screens">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMenu"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDarkBlue"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Gerenciar > Novo Usuário"
+            app:titleTextColor="@color/colorWhite"></androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp">
+
+        <TextView
+            android:id="@+id/textUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Selecione o perfil de cadastro"
+            android:textColor="@color/white"
+            android:textSize="19dp" />
+
+
+        <CheckBox
+            android:id="@+id/checkboxClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onCheckboxClicked"
+            android:text="Cliente"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textChecbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textUser"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="10dp"
+            android:text="ou"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/checkboxTechnican"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textUser"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@color/white"
+            android:onClick="onCheckboxClicked"
+            android:text="Técnico"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxClient"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Insira o nome completo"
+            android:padding="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cpfNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameNewUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Digite o CPF do novo usuário"
+            android:padding="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cpfNewUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Digite o telefone"
+            android:padding="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNewUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Defina um nome de usuário"
+            android:padding="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/accountNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNewUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Defina uma senha"
+            android:padding="16dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repeatAccountNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountNewUser"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_border_white"
+            android:backgroundTint="@color/white"
+            android:hint="Repita a senha"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonCreateNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repeatAccountNewUser"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/black_overlay"
+            android:padding="20dp"
+            android:text="Finalizar Cadastro"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BKE-Auth4ISP</string>
+    <string name="carregando">Carregando...</string>
+    <string name="title_activity_bottom_acitivty">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="BKE_OTAC">80C7622471B6AD6D23C7354912BDC97559EA72F65DA8528ADE81D3559FC940B3</string>
+</resources>
