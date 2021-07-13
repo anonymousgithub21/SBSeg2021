@@ -37,7 +37,8 @@ public class BKEAuth4ISPServerInteractor implements bkeauth4ispserver.BKEAuth4IS
     public void downloadM2Information(String otac) {
         FileInputStream serviceAccount;
         try {
-            serviceAccount = new FileInputStream("C:\\Users\\vagne\\Downloads\\BKE_Auth4isp_Server-master\\BKE_Auth4isp_Server-master\\inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json");
+//            serviceAccount = new FileInputStream("C:\\Users\\vagne\\Downloads\\BKE_Auth4isp_Server-master\\BKE_Auth4isp_Server-master\\inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json");
+            serviceAccount = new FileInputStream("inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json");
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                     .setDatabaseUrl("https://inovaisp-default-rtdb.firebaseio.com")
