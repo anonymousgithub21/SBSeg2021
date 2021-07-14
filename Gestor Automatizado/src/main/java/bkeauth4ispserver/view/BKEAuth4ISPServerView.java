@@ -17,7 +17,7 @@ public class BKEAuth4ISPServerView implements bkeauth4ispserver.BKEAuth4ISPServe
         BKEAuth4ISPServerView view = new BKEAuth4ISPServerView();
         view.presenter = new BKEAuth4ISPServerPresenter(view);
         view.presenter.downloadM2Information();
-
+        System.out.println("Gestor automatizado em execução!");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
