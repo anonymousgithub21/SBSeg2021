@@ -122,6 +122,7 @@
         android:visibility="gone"
         android:layout_marginTop="10dp"
         android:drawablePadding="4dp"
+        android:inputType="number"
         android:drawableLeft="@drawable/ic_baseline_person"
         android:background="@drawable/button_border_blue"
         android:hint="nome de usuário"

@@ -26,8 +26,7 @@ public class LoginPresenter implements LoginContracts.Presenter {
 
     @Override
     public void requestLogin(String username, String password) {
-        System.out.println("Cliclou Presenter");
-        interactor.verifyLogin(username, password);
+        interactor.verifyLogin(username.replace(".", "").replace("-",""), password);
     }
 
     @Override

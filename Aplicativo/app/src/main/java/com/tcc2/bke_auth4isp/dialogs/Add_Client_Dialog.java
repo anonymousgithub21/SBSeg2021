@@ -78,6 +78,9 @@ public class Add_Client_Dialog {
                     cpf = cpf.replace(".", "");
                     cpf = cpf.replace("-","");
                     presenter.downloadClientAPI(cpf);
+                    System.out.println(cpf + "cpf");
+                    usernameClient.setText(cpf);
+                    System.out.println(usernameClient.getText() + "username get text");
                 }
             }
         });
@@ -86,13 +89,20 @@ public class Add_Client_Dialog {
         btnDialogSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = String.valueOf(usernameClient.getText());
+                String cpf = String.valueOf(cpfClient.getText());
+                cpf = cpf.replace(".", "");
+                cpf = cpf.replace("-","");
+                String username = usernameClient.getText().toString();
+                username = username.replace(".", "");
+                username = username.replace("-","");
                 String password = String.valueOf(passwordClient.getText());
                 String role = "Client";
 
                 user = new User(username, password, role);
-
+                System.out.println(usernameClient.getText() + "username get text");
+                System.out.println(client.getUsername() + "username client");
                 presenter.saveNewClient(client, user);
+
             }
         });
     }
@@ -103,11 +113,14 @@ public class Add_Client_Dialog {
         generalDate.setVisibility(View.VISIBLE);
         infoLoginClient.setVisibility(View.VISIBLE);
         usernameClient.setVisibility(View.VISIBLE);
+        System.out.println(usernameClient.getText() + "username show cliente information");
         passwordClient.setVisibility(View.VISIBLE);
         nameClient.setText(client.getName());
         phoneClient.setText(client.getPhone());
         rgClient.setText(String.valueOf(client.getRg()));
         btnDialogSave.setEnabled(true);
+        System.out.println(client.getUsername() + "username onShowClientInformation");
+
     }
 
     public void close() {

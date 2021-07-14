@@ -8,6 +8,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.tcc2.bke_auth4isp.analytic_logs.YLog;
 import com.tcc2.bke_auth4isp.common.CommonDatabaseReferences;
@@ -83,17 +84,19 @@ public class ListClientsInteractor implements ListClientsContracts.Interactor {
 
     @Override
     public void saveNewClient(Client client) {
-            YLog.d("ListClientsInteractor", "saveNewClient", "Salvando novo cliente: " + client.getName());
-            Task<Void> reference = CommonDatabaseReferences.getClientReference(client.getUsername()).setValue(client);
+            YLog.d("ListClientsInteractor", "saveNewClient", "Salvando novo cliente: " + client.getUsername());
+            DatabaseReference reference = CommonDatabaseReferences.getClientReference(client.getUsername());
+        System.out.println(reference.getRef() + "Referência");
+            Task<Void> task = reference.setValue(client);
 
-            reference.addOnSuccessListener(new OnSuccessListener<Void>() {
+            task.addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
                     presenter.onClientSaved(client);
                 }
             });
 
-            reference.addOnFailureListener(new OnFailureListener() {
+            task.addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     presenter.onError(e.getMessage());
@@ -103,7 +106,7 @@ public class ListClientsInteractor implements ListClientsContracts.Interactor {
 
     @Override
     public void saveNewUser(User user) {
-        YLog.d("CallsInteractor", "downloadCalls", "Salvando novo cliente: " + user.getUsername());
+        YLog.d("CallsInteractor", "downloadCalls", "Salvando novo usuário: " + user.getUsername());
         Task<Void> reference = CommonDatabaseReferences.getLoginReference(user.getUsername()).setValue(user);
 
         reference.addOnFailureListener(new OnFailureListener() {

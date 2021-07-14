@@ -60,8 +60,6 @@ public class Add_Technician_Dialog {
         MaskEditTextChangedListener maskCPF = new MaskEditTextChangedListener("###.###.###-##", cpfTechnician);
         cpfTechnician.addTextChangedListener(maskCPF);
 
-
-
         cpfTechnician.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -81,6 +79,7 @@ public class Add_Technician_Dialog {
                     cpf = cpf.replace("-","");
                     System.out.println("Aqui o CPF: " + cpf);
                     presenter.downloadTechnicianAPI(cpf);
+                    usernameTechnician.setText(cpf);
                 }
             }
         });
@@ -92,7 +91,9 @@ public class Add_Technician_Dialog {
                 String cpf = String.valueOf(cpfTechnician.getText());
                 cpf = cpf.replace(".", "");
                 cpf = cpf.replace("-","");
-                String username = String.valueOf(usernameTechnician.getText());
+                String username = usernameTechnician.getText().toString();
+                username = username.replace(".", "");
+                username = username.replace("-","");
                 String password = String.valueOf(passwordTechnician.getText());
                 String role = "Technician";
 

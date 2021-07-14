@@ -74,7 +74,7 @@ public class ListClientFragment extends Fragment implements ListClientsContracts
 
     @Override
     public void onClientAPIReceived(Client client) {
-        YLog.d("ListClientFragment", "onClientAPIReceived", "Chegou o cliente com CPF: " + client.getCpf() + " da API." );
+        YLog.d("ListConClientAPIReceivedlientFragment", "onClientAPIReceived", "Chegou o cliente com CPF: " + client.getCpf() + " da API." );
         add_client_dialog.onShowClientInformation(client);
     }
 
