@@ -50,7 +50,7 @@ public class GenerateQRCodeTechnicianActivity extends AppCompatActivity implemen
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
             imgQRCode.setImageBitmap(bitmap);
-        } catch (WriterException e){
+        } catch (WriterException e) {
             e.printStackTrace();
         }
     }
@@ -67,7 +67,11 @@ public class GenerateQRCodeTechnicianActivity extends AppCompatActivity implemen
 
     @Override
     public void showConfirmationActivity(Client client) {
-        ConfirmAuthenticationDialog confirmAuthenticationDialog = new ConfirmAuthenticationDialog(this, client);
+        try {
+            new ConfirmAuthenticationDialog(this, client);
+        } catch (Exception e) {
+            e.getLocalizedMessage();
+        }
     }
 
     @Override
