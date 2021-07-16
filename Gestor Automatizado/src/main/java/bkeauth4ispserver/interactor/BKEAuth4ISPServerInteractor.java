@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author anonymous
+ * @author anonymou
  */
 public class BKEAuth4ISPServerInteractor implements bkeauth4ispserver.BKEAuth4ISPServerContracts.Interactor {
 
