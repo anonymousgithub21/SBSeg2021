@@ -1,0 +1,67 @@
+usertype String, MessageKey;
+const ISP-CLI, ISP-TEC, palavraVazia: String; 
+secret otac : MessageKey;
+
+protocol BKE-Auth4-ISP(Cli, Tec, Isp) {
+
+	role Cli {
+		var   nonce-tec, nonce-isp 	: Nonce;
+		fresh nonce-cli             : Nonce;
+		
+		// MENSAGEM A
+		send_1(Cli, Tec, {nonce-cli,                       Cli, Isp}otac);
+		recv_3(Isp, Cli, {nonce-cli, nonce-tec, nonce-isp, Tec, Isp}otac);
+		
+		// MENSAGEM B
+		send_4(Cli, Tec, ({nonce-isp}nonce-tec));
+
+		claim(Cli, Niagree);
+		claim(Cli, Weakagree);
+		claim(Cli, Nisynch);
+		claim(Cli, Secret, otac);
+		claim(Cli, Secret, nonce-cli);
+		claim(Cli, Secret, nonce-tec);
+		claim(Cli, Secret, nonce-isp);
+	}
+
+	role Tec {
+		var   nonce-cli, nonce-isp	: Nonce;
+		fresh nonce-tec             : Nonce;
+
+		// MENSAGEM A
+		recv_1(Cli, Tec, {nonce-cli,            Cli, Isp}otac);
+		send_2(Tec, Isp, {nonce-cli, nonce-tec, Tec, Cli}otac);
+
+		// MENSAGEM B
+		recv_4(Cli, Tec, ({nonce-isp}nonce-tec));
+		send_5(Tec, Isp, ({palavraVazia}nonce-isp));
+	
+		claim(Tec, Niagree);
+		claim(Tec, Weakagree);
+		claim(Tec, Nisynch);
+		claim(Tec, Secret, otac);
+		claim(Tec, Secret, nonce-cli);
+		claim(Tec, Secret, nonce-tec);
+		claim(Tec, Secret, nonce-isp);
+	}
+
+	role Isp {
+		var   nonce-tec, nonce-cli  : Nonce;
+		fresh nonce-isp      		: Nonce;
+			
+		// MENSAGEM A
+		recv_2(Tec, Isp, {nonce-cli, nonce-tec, Tec, Cli}otac);
+		send_3(Isp, Cli, {nonce-cli, nonce-tec, nonce-isp, Tec, Isp}otac);
+
+		//MENSAGEM B
+		recv_5(Tec, Isp, ({palavraVazia}nonce-isp));
+
+		claim(Isp, Niagree);
+		claim(Isp, Weakagree);
+		claim(Isp, Nisynch);
+		claim(Isp, Secret, otac);
+		claim(Isp, Secret, nonce-cli);
+		claim(Isp, Secret, nonce-tec);
+		claim(Isp, Secret, nonce-isp);
+	}	
+}
