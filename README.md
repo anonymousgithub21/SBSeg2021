@@ -1,26 +1,64 @@
 # SBSeg2021
 Repositório com os documentos e códigos fontes submetidos ao Salão de Ferramentas do SBSeg 2021.
 
--> Na pasta Aplicativo, encontram-se todos os códigos-fontes necessários para rodar a aplicação móvel em um emulador ou smartphone com sistema operacional Android.
--> Na pasta Gestor Automatizado, encontram-se todos os códigos-fontes necessários para rodar o gestor automatizado. 
+## 📌 Overview
+ #### 1. [📱 Aplicativo](#app-)
 
-Em resumo, existem três formas para realizar testes:
+Nesta pasta, encontram-se todos os códigos-fontes necessários para rodar a aplicação móvel em um em um emulador ou _smartphone_ com sistema operacional Android.
 
-1° - Executando o arquivo do Aplicativo (.apk) e utilizando o Gestor Automatizado disponível nos nossos servidores.
-1.1 - O Gestor Automatizado está sendo executado em um servidor publico nosso. Assim, não é preciso executá-lo.
-2.2 - Basta instalar o aplicativo (.apk) em seu smartphone e realizar os testes. 
+#### 2. **[👷 Gestor Automatizado](#gestor-)**
 
-2° - Executando os arquivos .jar do Gestor Automatizado e .apk do Aplicativo
-2.1 - Baixe e execute o arquivo do Gestor Automatizado (.jar) na sua máquina (e.g., servidor, notebook, etc).
-2.2 - Baixe e execute o arquivo do Aplicativo (.apk) no seu smartphone/emulador. 
-2.3 - Realize os testes.
-Obs: O Gestor Automatizado deve estar em execução para realizar testes nas funcionalidades de autenticação.
+Nesta pasta, encontram-se todos os códigos-fontes necessários para rodar o algoritmo do Gestor Automatizado.
 
-3° - Verificando códigos-fontes e executando a partir de IDEs
-3.1 - Você deve realizar um git pull da pasta Aplicativo na sua IDE de preferência (e.g., Android Studio)
-3.2 - Inicialize um emulador ou smartphone
-3.3 - Clique em "Run app". Assim, o aplicativo será instalado.
-Agora, para que obtenha êxito no processo de autenticação, você deve executar o Gestor Automatizado:
-3.4 - Realize um git pull da pasta Gestor Automatizado na sua IDE de preferência (e.g., Netbeans, IntelliJ)
-3.5 - Clique em Run Main Project, ou simplesmente tecle (F6)
-3.6 - A partir do momento em que o Gestor Automatizado estiver em execução, os testes com as funcionalidades de autenticação podem ser testadas.
+#### 3. **[✅ Verificação de Protocolo de Segurança com Scyther](#scyther-)** 
+
+Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verificar a segurança do protocolo BKE4ISP, além de instruções sobre como executá-lo.
+
+
+## 📝Manual de Instalação e Instruções para Testes no Aplicativo e no Gestor Automatizado.## 
+
+## **🏷️ Nota** 
+#### Nesta implementação, utilizamos o Java SE Development Kit 8 para executar arquivos java, a IDE Apache Netbeans em sua versão 12.3 para implantar o Gestor Automatizado, o ambiente de desenvolvimento integrado Android Studio, na sua versão 4.2 para desenvolver para a plataforma Android, além dos  injetores de dependências Maven (para o Netbeans) e Gradle (para o Android Studio). O desenvolvimento foi realizado em uma máquina com o Sistema Operacional de 64 bits - Windows 10 Home. Os dados são persistidos no Firebase Realtime Database.
+
+## **📝 Requisitos** 
+#### Nós disponibilizamos três formas de testes. Na primeira e segunda, os requisitos necessários consistem no Java SE Devolopment Kit para rodar um arquivo do tipo .jar e um smartphone com o sistema operacional Android para rodar um arquivo com a extensão .apk. Na terceira forma, é necessário os mesmos requisitos da 1º e 2º forma, além das IDEs e os injetores de dependência citados na nota acima.
+
+## **⚙️ Instalação**
+#### **⚠️ Importante**: Para que todos os processos funcionem corretamente, é necessário que o **Gestor Automatizado** esteja **em execução**.
+
+## **1️⃣ Forma** 
+#### Nós disponibilizamos o Gestor Automatizado em um servidor público, dispensando a execução manual. Assim, basta instalar o aplicativo em seu smartphone utilizando o arquivo identificaispremoto.apk. Na tela de login, basta entrar com um dos usuários pré-cadastrados:
+|              |  Cliente       |    Técnico       | Gestor Humano   |
+| :---:        |     :---:      |         :---:    |  :---:   |
+| Usuário 1:   | 408.345.420-21 | 514.775.490-30   |  946.234.100-13 |
+| Password 1:  | 40834542021    | 51477549030      |  94623410013    |
+| Usuário 2:   | 716.421.960-53 | 583.753.510-16   |  - |
+| Password 2:  | 71642196053    | 58375351016      |  - |
+
+
+## 2️⃣ **Forma** 
+A segunda forma consiste em realizar o download do arquivo que representa o Gestor Automatizado (gestorautomatizado.jar) e do aplicativo Identifica ISP (identificaisplocal.apk) para executá-los localmente. O Gestor Automatizado deve ser executado em uma máquina (i.e., computador) e deve conter o arquivo inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json no mesmo diretório. O aplicativo deve ser executado em um smartphone. Os arquivos estão disponíveis neste repositório. Na tela de login, é necessário entrar com o seguinte usuário pré-cadastrado:
+|              |  Cliente       |    Técnico       | Gestor Humano   |
+| :---:        |     :---:      |         :---:    |  :---:   |
+| Usuário 1:   | 955.860.260-40 | 588.407.470-01   |  946.234.100-13 |
+| Password 1:  | 95586026040    | 58840747001      |  94623410013    |
+
+
+## 3️⃣ **Forma**
+A terceira forma abrange o download e a execução manual dos códigos-fontes do **Aplicativo** e do **Gestor Automatizado**. Tais aplicações estão identificadas no repositório conforme o nome destacado em negrito. Após a execução de ambos, os testes podem ser feitos utilizando os mesmos usuários da 2ª Forma.
+
+🏷️ Nota: Utilizamos os IDEs Apache Netbeans em sua versão 12.3 (para o Gestor Automatizado) e Android Studio na versão 4.2 (para o Aplicativo), junto com os injetores de dependência Maven e Gradle. Também, utilizamos o Java SE Development Kit na versão 8 em um Windows 10 com base em 64 bits.
+
+## ✔️ Já instalei! Como Testar?!
+
+Basicamente,  o aplicativo Identifica ISP tem três funcionalidades principais: _(i)_ autenticar clientes e técnicos, _(ii)_ simular a integração com uma API externa, _(iii)_ avaliação de técnicos.
+
+➡️ _(i)_ Para testar o processo de autenticação, o **Técnico**, na tela inicial, deve clicar em _**gerar código de autenticação**_. O **Cliente**, por sua vez, deve clicar em _**ler código de autenticação**_ e apontar a câmera para o QR Code do **técnico**. Após a autenticação, ambas identidades são exibidas. 
+
+➡️ **O Gestor Humano** pode revogar a identificação de um cliente ou técnico, clicando no botão _**revogar identificação**_. Assim, o mesmo não poderá mais ser autenticado.
+
+➡️ _(ii)_ Para simular uma **API Externa**, o Gestor Humano deve clicar em _**gerenciar usuários**_ e no botão representado por um "_**+**_". Para simular adição de clientes, os CPFs podem ser utilizados:  **24268060014** ou **94547931011**. Para técnico, o CPF **04186570094**.
+
+➡️ _(iii)_ Para simular a avaliação de um técnico, o Cliente deve ter um chamado registrado. Depois, é só clicar no **_chamado_**, preencher com uma ou cinco estrelas, e opcionalmente, escrever um comentário. Depois, é só relatar o feedback.
+
+**Observação.** Os clientes com CPFs 40834542021 e 95586026040 possuem chamados registrados.
