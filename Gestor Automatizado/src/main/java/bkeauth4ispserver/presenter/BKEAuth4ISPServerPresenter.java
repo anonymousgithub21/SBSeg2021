@@ -23,7 +23,7 @@ public class BKEAuth4ISPServerPresenter implements bkeauth4ispserver.BKEAuth4ISP
     bkeauth4ispserver.BKEAuth4ISPServerContracts.Interactor interactor;
     bkeauth4ispserver.BKEAuth4ISPServerContracts.View view;
     TEA tea;
-    static String otac = "80C7622471B6AD6D23C7354912BDC97559EA72F65DA8528ADE81D3559FC940B3";
+    static String otac = "26SACZXWD23C7521ASXVBDC9755921VVVZXZX8528ADE8112ASD9FC940B3";
     static String IDISP = "INTERNEITH";
     Random nonceIsp;
 
