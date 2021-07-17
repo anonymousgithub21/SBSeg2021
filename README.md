@@ -2,15 +2,15 @@
 Repositório com os documentos e códigos fontes submetidos ao Salão de Ferramentas do SBSeg 2021.
 
 ## 📌 Overview
- #### 1. [📱 Aplicativo](#app-)
+ #### 1. **<a href="https://github.com/anonymousgithub21/SBSeg2021/tree/master/Aplicativo"> 📱 Aplicativo </a>**
 
 Nesta pasta, encontram-se todos os códigos-fontes necessários para rodar a aplicação móvel em um em um emulador ou _smartphone_ com sistema operacional Android.
 
-#### 2. **[👷 Gestor Automatizado](#gestor-)**
+#### 2.  **<a href="https://github.com/anonymousgithub21/SBSeg2021/tree/master/Gestor%20Automatizado"> 👷 Gestor Automatizado </a>**
 
 Nesta pasta, encontram-se todos os códigos-fontes necessários para rodar o algoritmo do Gestor Automatizado.
 
-#### 3. **[✅ Verificação de Protocolo de Segurança com Scyther](#scyther-)** 
+#### 3. **<a href="https://github.com/anonymousgithub21/SBSeg2021/tree/master/BKE_Auth4ISP_Scyther"> ✅ Verificação de Protocolo de Segurança com Scyther </a>**
 
 Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verificar a segurança do protocolo BKE4ISP, além de instruções sobre como executá-lo.
 
