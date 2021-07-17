@@ -27,7 +27,7 @@ Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verific
 #### **⚠️ Importante**: Para que todos os processos funcionem corretamente, é necessário que o **Gestor Automatizado** esteja **em execução**.
 
 ## **1️⃣ Forma** 
-#### Nós disponibilizamos o Gestor Automatizado em um servidor público, dispensando a execução manual. Assim, basta instalar o aplicativo em seu smartphone utilizando o arquivo identificaispremoto.apk. Na tela de login, basta entrar com um dos usuários pré-cadastrados:
+#### Nós disponibilizamos o Gestor Automatizado em um servidor público, dispensando a execução manual. Assim, basta instalar o aplicativo em seu smartphone utilizando o arquivo <a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/identificaispremoto.apk">identificaispremoto.apk</a>. Na tela de login, basta entrar com um dos usuários pré-cadastrados:
 |              |  Cliente       |    Técnico       | Gestor Humano   |
 | :---:        |     :---:      |         :---:    |  :---:   |
 | Usuário 1:   | 408.345.420-21 | 514.775.490-30   |  946.234.100-13 |
@@ -37,7 +37,7 @@ Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verific
 
 
 ## 2️⃣ **Forma** 
-A segunda forma consiste em realizar o download do arquivo que representa o Gestor Automatizado (gestorautomatizado.jar) e do aplicativo Identifica ISP (identificaisplocal.apk) para executá-los localmente. O Gestor Automatizado deve ser executado em uma máquina (i.e., computador) e deve conter o arquivo inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json no mesmo diretório. O aplicativo deve ser executado em um smartphone. Os arquivos estão disponíveis neste repositório. Na tela de login, é necessário entrar com o seguinte usuário pré-cadastrado:
+A segunda forma consiste em realizar o download do arquivo que representa o Gestor Automatizado (<a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/gestorautomatizado.jar">gestorautomatizado.jar</a>) e do aplicativo Identifica ISP (<a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/identificaisplocal.apk">identificaisplocal.apk</a>) para executá-los localmente. O Gestor Automatizado deve ser executado em uma máquina (i.e., computador) e deve conter o arquivo (<a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json">inovaisp-firebase-adminsdk-urcvf-1b5492eea5.json</a>) no mesmo diretório. O aplicativo deve ser executado em um smartphone. Os arquivos estão disponíveis neste repositório. Na tela de login, é necessário entrar com o seguinte usuário pré-cadastrado:
 |              |  Cliente       |    Técnico       | Gestor Humano   |
 | :---:        |     :---:      |         :---:    |  :---:   |
 | Usuário 1:   | 955.860.260-40 | 588.407.470-01   |  946.234.100-13 |
@@ -45,7 +45,7 @@ A segunda forma consiste em realizar o download do arquivo que representa o Gest
 
 
 ## 3️⃣ **Forma**
-A terceira forma abrange o download e a execução manual dos códigos-fontes do **Aplicativo** e do **Gestor Automatizado**. Tais aplicações estão identificadas no repositório conforme o nome destacado em negrito. Após a execução de ambos, os testes podem ser feitos utilizando os mesmos usuários da 2ª Forma.
+A terceira forma abrange o download e a execução manual dos códigos-fontes do **<a href="https://github.com/anonymousgithub21/SBSeg2021/tree/master/Aplicativo">Aplicativo </a>** e do **<a href="https://github.com/anonymousgithub21/SBSeg2021/tree/master/Gestor%20Automatizado">Gestor Automatizado</a>**. Tais aplicações estão identificadas no repositório conforme o nome destacado em negrito. Após a execução de ambos, os testes podem ser feitos utilizando os mesmos usuários da 2ª Forma.
 
 🏷️ Nota: Utilizamos os IDEs Apache Netbeans em sua versão 12.3 (para o Gestor Automatizado) e Android Studio na versão 4.2 (para o Aplicativo), junto com os injetores de dependência Maven e Gradle. Também, utilizamos o Java SE Development Kit na versão 8 em um Windows 10 com base em 64 bits.
 
