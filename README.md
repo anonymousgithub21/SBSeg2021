@@ -15,7 +15,7 @@ Nesta pasta, encontram-se todos os códigos-fontes necessários para rodar o alg
 Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verificar a segurança do protocolo BKE4ISP, além de instruções sobre como executá-lo.
 
 
-## 📝Manual de Instalação e Instruções para Testes no Aplicativo e no Gestor Automatizado.## 
+## 📝Manual de Instalação e Instruções para Testes no Aplicativo e no Gestor Automatizado.
 
 ## **🏷️ Nota** 
 #### Nesta implementação, utilizamos o Java SE Development Kit 8 para executar arquivos java, a IDE Apache Netbeans em sua versão 12.3 para implantar o Gestor Automatizado, o ambiente de desenvolvimento integrado Android Studio, na sua versão 4.2 para desenvolver para a plataforma Android, além dos  injetores de dependências Maven (para o Netbeans) e Gradle (para o Android Studio). O desenvolvimento foi realizado em uma máquina com o Sistema Operacional de 64 bits - Windows 10 Home. Os dados são persistidos no Firebase Realtime Database.
