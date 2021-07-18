@@ -18,16 +18,16 @@ Na pasta BKE_Auth4ISP_Scyther encontra-se o código .spdl utilizado para verific
 ## 📝Manual de Instalação e Instruções para Testes no Aplicativo e no Gestor Automatizado.
 
 ## **🏷️ Nota** 
-#### Nesta implementação, utilizamos o Java SE Development Kit 8 para executar arquivos java, a IDE Apache Netbeans em sua versão 12.3 para implantar o Gestor Automatizado, o ambiente de desenvolvimento integrado Android Studio, na sua versão 4.2 para desenvolver para a plataforma Android, além dos  injetores de dependências Maven (para o Netbeans) e Gradle (para o Android Studio). O desenvolvimento foi realizado em uma máquina com o Sistema Operacional de 64 bits - Windows 10 Home. Os dados são persistidos no Firebase Realtime Database.
+Nesta implementação, utilizamos o Java SE Development Kit 8 para executar arquivos java, a IDE Apache Netbeans em sua versão 12.3 para implantar o Gestor Automatizado, o ambiente de desenvolvimento integrado Android Studio, na sua versão 4.2 para desenvolver para a plataforma Android, além dos  injetores de dependências Maven (para o Netbeans) e Gradle (para o Android Studio). O desenvolvimento foi realizado em uma máquina com o Sistema Operacional de 64 bits - Windows 10 Home. Os dados são persistidos no Firebase Realtime Database.
 
 ## **📝 Requisitos** 
-#### Nós disponibilizamos três formas de testes. Na primeira e segunda, os requisitos necessários consistem no Java SE Devolopment Kit para rodar um arquivo do tipo .jar e um smartphone com o sistema operacional Android para rodar um arquivo com a extensão .apk. Na terceira forma, é necessário os mesmos requisitos da 1º e 2º forma, além das IDEs e os injetores de dependência citados na nota acima.
+Nós disponibilizamos três formas de testes. Na primeira e segunda, os requisitos necessários consistem no Java SE Devolopment Kit para rodar um arquivo do tipo .jar e um smartphone com o sistema operacional Android para rodar um arquivo com a extensão .apk. Na terceira forma, é necessário os mesmos requisitos da 1º e 2º forma, além das IDEs e os injetores de dependência citados na nota acima.
 
 ## **⚙️ Instalação**
 #### **⚠️ Importante**: Para que todos os processos funcionem corretamente, é necessário que o **Gestor Automatizado** esteja **em execução**.
 
 ## **1️⃣ Forma** 
-#### Nós disponibilizamos o Gestor Automatizado em um servidor público, dispensando a execução manual. Assim, basta instalar o aplicativo em seu smartphone utilizando o arquivo <a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/identificaispremoto.apk">identificaispremoto.apk</a>. Na tela de login, basta entrar com um dos usuários pré-cadastrados:
+Nós disponibilizamos o Gestor Automatizado em um servidor público, dispensando a execução manual. Assim, basta instalar o aplicativo em seu smartphone utilizando o arquivo <a href="https://github.com/anonymousgithub21/SBSeg2021/blob/master/identificaispremoto.apk">identificaispremoto.apk</a>. Na tela de login, basta entrar com um dos usuários pré-cadastrados:
 |              |  Cliente       |    Técnico       | Gestor Humano   |
 | :---:        |     :---:      |         :---:    |  :---:   |
 | Usuário 1:   | 408.345.420-21 | 514.775.490-30   |  946.234.100-13 |
