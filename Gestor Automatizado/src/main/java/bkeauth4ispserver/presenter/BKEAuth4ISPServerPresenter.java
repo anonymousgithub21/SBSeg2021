@@ -6,7 +6,7 @@
 package bkeauth4ispserver.presenter;
 
 import bkeauth4ispserver.common.SecurityUtilies;
-import bkeauth4ispserver.common.TEA;
+import bkeauth4ispserver.common.AES;
 import bkeauth4ispserver.entity.M3AuthSolicitation;
 import bkeauth4ispserver.interactor.BKEAuth4ISPServerInteractor;
 import java.security.NoSuchAlgorithmException;
@@ -22,20 +22,20 @@ public class BKEAuth4ISPServerPresenter implements bkeauth4ispserver.BKEAuth4ISP
 
     bkeauth4ispserver.BKEAuth4ISPServerContracts.Interactor interactor;
     bkeauth4ispserver.BKEAuth4ISPServerContracts.View view;
-    TEA tea;
     static String otac = "26SACZXWD23C7521ASXVBDC9755921VVVZXZX8528ADE8112ASD9FC940B3";
     static String IDISP = "INTERNEITH";
+    AES AES;
     Random nonceIsp;
 
     public BKEAuth4ISPServerPresenter(bkeauth4ispserver.BKEAuth4ISPServerContracts.View view) {
         this.view = view;
         this.interactor = new BKEAuth4ISPServerInteractor(this);
-        this.tea = new TEA(otac);
+        this.AES = AES;
     }
 
     @Override
     public void onM2InformationRetrivied(String encryptedM2) {
-        String decrypted = tea.decrypt(encryptedM2);
+        String decrypted = AES.decrypt(encryptedM2, otac);
         view.showMessage2(decrypted);
         System.out.println("M2 Decrypted: " + decrypted);
         String[] clientParameters = decrypted.split("="); // Criando um array para separar as informações com um split
@@ -66,13 +66,13 @@ public class BKEAuth4ISPServerPresenter implements bkeauth4ispserver.BKEAuth4ISP
         nonceIsp = new Random(); // criando um nonce para o cliente
         long nonccc = nonceIsp.nextLong();
         M3AuthSolicitation m3AuthSolicitation = new M3AuthSolicitation(nonceTechnician, nonceClient, String.valueOf(nonccc), clientUsername, IDISP, otac);
-        String encrypted = tea.encrypt(m3AuthSolicitation.getPayload());
+        String encrypted = AES.encrypt(m3AuthSolicitation.getPayload(), otac);
         interactor.sendM3Information(encrypted, otac);
         interactor.listenForM5(otac);
 
         System.out.println("M3 Input: " + m3AuthSolicitation.getPayload());
         System.out.println("M3 Encrypted: " + encrypted);
-        String decrypted = tea.decrypt(encrypted);
+        String decrypted = AES.decrypt(encrypted, otac);
         System.out.println("M3 Decrypted: " + decrypted);
     }
 
@@ -84,7 +84,7 @@ public class BKEAuth4ISPServerPresenter implements bkeauth4ispserver.BKEAuth4ISP
     @Override
     public void onM5InformationRetrivied(String encryptedM5) {
         //System.out.println("encryptedM5" + encryptedM5);
-        String decrypted = tea.decrypt(encryptedM5);
+        String decrypted = AES.decrypt(encryptedM5, otac);
         System.out.println("M5 Decrypted: " + decrypted);
         view.showMessage2(decrypted);
         

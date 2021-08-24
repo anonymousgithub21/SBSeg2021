@@ -20,7 +20,7 @@ import com.google.zxing.integration.android.IntentResult;
 import com.tcc2.bke_auth4isp.R;
 import com.tcc2.bke_auth4isp.analytic_logs.YLog;
 import com.tcc2.bke_auth4isp.common.SecurityUtilities;
-import com.tcc2.bke_auth4isp.common.TEA;
+import com.tcc2.bke_auth4isp.common.AES;
 import com.tcc2.bke_auth4isp.dialogs.ConfirmAuthenticationDialog;
 import com.tcc2.bke_auth4isp.dialogs.ErrorHMACDialog;
 import com.tcc2.bke_auth4isp.dialogs.LoadingDialog;
@@ -111,8 +111,8 @@ public class HomeFragment extends Fragment implements ClientHomeContracts.View {
 
         String otac = getString(R.string.BKE_OTAC);
         System.out.println("QR Code read: " + contents);
-        TEA tea = new TEA(otac); // Inicializando o TEA com o OTAC do cliente
-        String output = tea.decrypt(contents); // Decriptando o conteúdo recebido do QR Code e passo para variável output
+//        AES AES = new AES(); // Inicializando o TEA com o OTAC do cliente
+        String output = AES.decrypt(contents, otac); // Decriptando o conteúdo recebido do QR Code e passo para variável output
         System.out.println("M1 Output: " + output);
         String[] technicianParameters = output.split("="); // Criando um array para separar as informações com um split
 
@@ -151,7 +151,7 @@ public class HomeFragment extends Fragment implements ClientHomeContracts.View {
 
         AuthSolicitation authSolicitation = new AuthSolicitation(technicianUsername, ISPId, nonceTechnician, person.getUsername(),
                 String.valueOf(nonceClient.nextLong()), otac); // Juntando as informações recebidas com a do cliente para formar a mensagem
-        String encrypted = tea.encrypt(authSolicitation.getPayloadM2()); // Encriptando as informações da mensagem
+        String encrypted = AES.encrypt(authSolicitation.getPayloadM2(), otac); // Encriptando as informações da mensagem
         System.out.println("M2 Input: " + authSolicitation.getPayloadM2());
         System.out.println("M2 Encrypted: " + encrypted);
 

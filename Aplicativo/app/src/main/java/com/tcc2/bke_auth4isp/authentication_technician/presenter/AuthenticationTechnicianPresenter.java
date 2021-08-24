@@ -12,7 +12,7 @@ import com.tcc2.bke_auth4isp.analytic_logs.YLog;
 import com.tcc2.bke_auth4isp.authentication_technician.AuthenticationTechnicianContracts;
 import com.tcc2.bke_auth4isp.authentication_technician.interactor.AuthenticationTechnicianInteractor;
 import com.tcc2.bke_auth4isp.common.SecurityUtilities;
-import com.tcc2.bke_auth4isp.common.TEA;
+import com.tcc2.bke_auth4isp.common.AES;
 import com.tcc2.bke_auth4isp.dialogs.ErrorHMACDialog;
 import com.tcc2.bke_auth4isp.entity.Client;
 import com.tcc2.bke_auth4isp.entity.Person;
@@ -28,14 +28,14 @@ public class AuthenticationTechnicianPresenter implements AuthenticationTechnici
     Context mContext;
     Person person;
     String otac;
-    TEA tea;
+    AES AES;
 
     public AuthenticationTechnicianPresenter (AuthenticationTechnicianContracts.View view, Context mContext) {
         this.mContext = mContext;
         this.view = view;
         this.interactor = new AuthenticationTechnicianInteractor(this);
         this.otac = mContext.getString(R.string.BKE_OTAC);
-        this.tea = new TEA(otac);
+        this.AES = AES;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class AuthenticationTechnicianPresenter implements AuthenticationTechnici
         try {
             String HMAC = SecurityUtilities.hash256(input.concat(otac)); // Gerando HMAC = (input + otac)
 
-            String encrypted = new TEA(otac).encrypt(input.concat("=").concat(HMAC)); // Encriptando as informações + HMAC
+            String encrypted = AES.encrypt(input.concat("=").concat(HMAC), otac); // Encriptando as informações + HMAC
             view.generateQRCode(encrypted); // Gera QR Code com as informações
             interactor.listenForM3(otac);
             System.out.println("");
@@ -63,7 +63,7 @@ public class AuthenticationTechnicianPresenter implements AuthenticationTechnici
             YLog.d("AuthenticationTechnicianPresenter", "onOTACReceived", "Input: " + input);
             YLog.d("AuthenticationTechnicianPresenter", "onOTACReceived", "HMAC: " + HMAC);
             YLog.d("AuthenticationTechnicianPresenter", "onOTACReceived", "Encrypted: " + encrypted);
-            YLog.d("AuthenticationTechnicianPresenter", "onOTACReceived", "Decrypted: " + new TEA(otac).decrypt(encrypted) );
+            YLog.d("AuthenticationTechnicianPresenter", "onOTACReceived", "Decrypted: " + AES.decrypt(encrypted, otac) );
         } catch (NoSuchAlgorithmException e) {
             view.showErrorMessage(e.getLocalizedMessage());
             e.printStackTrace();
@@ -78,7 +78,7 @@ public class AuthenticationTechnicianPresenter implements AuthenticationTechnici
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onM3InformationRetrivied(String encryptedM3) {
-        String decrypted = tea.decrypt(encryptedM3);
+        String decrypted = AES.decrypt(encryptedM3, otac);
         System.out.println("M3 Output: " + decrypted);
 
         view.showMessage3(decrypted);
@@ -119,9 +119,9 @@ public class AuthenticationTechnicianPresenter implements AuthenticationTechnici
         String input = nonceIsp.concat("=").concat(nonceClient);
         System.out.println("M4 Input: " + input);
         String HMAC = SecurityUtilities.hash256(input.concat(otac)); // Gerando HMAC = (input + otac)
-        String encrypted = tea.encrypt(input.concat("=").concat(HMAC));
+        String encrypted = AES.encrypt(input.concat("=").concat(HMAC), otac);
         System.out.println("M4 Encrypted: " + encrypted);
-        System.out.println("M4 Decrypted: " + new TEA(otac).decrypt(encrypted));
+        System.out.println("M4 Decrypted: " + AES.decrypt(encrypted, otac));
 
         interactor.sendM4(encrypted, otac);
         interactor.downloadClientInformation(clientUsername);

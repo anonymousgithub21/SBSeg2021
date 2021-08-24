@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -92,7 +93,8 @@ public class AdapterListTechnician extends RecyclerView.Adapter<AdapterListTechn
         holder.buttonRevogationTechnician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listTechnicianFragment.revokeOTAC(technician.getUsername());
+//                listTechnicianFragment.revokeOTAC(technician.getUsername());
+                Toast.makeText(getmContext(), "Desabilitamos este fluxo porque a autorização foi feita de forma manual. Dessa forma, a revogação inviabilizaria futuros testes.", Toast.LENGTH_LONG);
             }
         });
 
