@@ -55,7 +55,7 @@ Basicamente,  o aplicativo Identifica ISP tem três funcionalidades principais: 
 
 ➡️ _(i)_ Para testar o processo de autenticação, o **Técnico**, na tela inicial, deve clicar em _**gerar código de autenticação**_. O **Cliente**, por sua vez, deve clicar em _**ler código de autenticação**_ e apontar a câmera para o QR Code do **técnico**. Após a autenticação, ambas identidades são exibidas. 
 
-➡️ **O Gestor Humano** pode revogar a identificação de um cliente ou técnico, clicando no botão _**revogar identificação**_. Assim, o mesmo não poderá mais ser autenticado.
+➡️ **O Gestor Humano** pode revogar a identificação de um cliente ou técnico, clicando no botão _**revogar identificação**_. Assim, o mesmo não poderá mais ser autenticado. **RECOMENDAMOS NÃO REVOGAR A IDENTIFICAÇÃO DOS USUÁRIOS, POIS OS MESMOS FORAM AUTORIZADOS MANUALMENTE PARA ESSES TESTES** (uma vez que o serviço de identificação não consta nesse demo).
 
 ➡️ _(ii)_ Para simular uma **API Externa**, o Gestor Humano deve clicar em _**gerenciar usuários**_ e no botão representado por um "_**+**_". Para simular adição de clientes, os CPFs podem ser utilizados:  **24268060014** ou **94547931011**. Para técnico, o CPF **04186570094**.
 
